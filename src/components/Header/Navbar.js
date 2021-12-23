@@ -8,7 +8,7 @@ const NavBar = ({links}) => {
     
     return (
         <div className="contentNavBar">
-            <NavLink to="/">
+            <NavLink to="/" className="prototipe">
                 <h2>Gonzalo Arroyo te da la bienvenida</h2>
             </NavLink>
             <ul className="unList">

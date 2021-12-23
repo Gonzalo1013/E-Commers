@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "./itemDetail.scss"
-import ItemCount from "./itemCount"
+import ItemCount from "./ItemCount/itemCount"
 
 const ItemDetail = ({detail}) => {
 
