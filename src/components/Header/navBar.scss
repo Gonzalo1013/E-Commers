@@ -1,0 +1,40 @@
+.contentNavBar{
+    background-color: lightgrey;
+    display: flex;
+    justify-content:space-between;
+    box-shadow: black 3px 3px 5px;
+    // position: fixed;
+    // width: 99%;
+    h2{
+        list-style: none;
+        text-decoration: none;
+        margin-left: 16px;
+        color: black;
+    }
+    .unList{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        .listNavBar{
+            margin: 10px;
+            list-style: none;
+            .linkLink{
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: large;
+                color: black;
+                padding: 16px 8px;
+                border-radius: 3px;
+            }
+            .linkLink:hover{
+                background-color: grey;
+            }
+        }
+        .logoCart{
+            width: 40px;
+            margin-right: 16px;
+        }
+    }
+}
