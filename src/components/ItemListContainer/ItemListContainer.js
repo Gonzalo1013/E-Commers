@@ -7,6 +7,8 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
     const [product, setProduct] =useState([])
 
+    
+
     useEffect(()=>{
         const pedidoData = fetch("https:/fakestoreapi.com/products")
         pedidoData 
@@ -14,7 +16,7 @@ const ItemListContainer = () => {
         .then((res)=>{
                     setLoading(false)
                     setProduct(res)
-                    console.log(res)
+                    // console.log(res)
                 })
         .catch(()=>{
             console.log("Algo anda mal");

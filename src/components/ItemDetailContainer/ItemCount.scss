@@ -1,0 +1,42 @@
+.itemCountContainer{
+
+    p{
+        font-size: 1em;
+    }
+    .cont{
+        display: flex;
+        flex-direction: row;
+        border:solid 1.5px rgb(173, 173, 173);
+        border-radius: 5px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        height: 30px;
+        // width: 300px;
+        .resta{
+            margin-left: 10px;
+            color: rgb(59, 133, 249);
+            font-size: 1.7em;
+            font-weight: bolder;
+        }
+        .contador{
+            font-size: 1.5em;
+        }
+        .suma{
+            margin-right: 10px;
+            color: rgb(59, 133, 249);
+            font-size: 1.7em;
+            font-weight: bolder;
+        }
+    }
+    .addCart{
+        border-radius: 5px;
+        padding: 10px 80px;
+        font-size: 1.1em;
+        color: white;
+        border: solid rgb(59, 133, 249) 1.5px;
+        background-color: rgb(59, 133, 249);
+        margin-top: 16px;
+        
+    }
+}

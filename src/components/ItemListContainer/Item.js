@@ -1,5 +1,5 @@
 import "./itemStyle.scss"
-
+import { Link } from "react-router-dom"
 
 const Item = ({item}) => {
     return (
@@ -8,7 +8,7 @@ const Item = ({item}) => {
                     <div className="detail">
                         <h4>{item.title}</h4>
                         <b>{item.price}</b>
-                        <button><a href="/public/index.html">Ver Detalle</a></button>
+                        <Link className="button" to={`/producto/${item.id}`}>Ver Detalle</Link>
                     </div>
                 </article>
     )
