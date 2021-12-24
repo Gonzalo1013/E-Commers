@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import {NavLink} from "react-router-dom"
+
 import "./ItemCount.scss"
 
 
@@ -16,6 +18,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         if(contador > 0)
         setContador(contador -1)
     }
+    
     const addCart = () =>{
         if(contador !== 0){
             onAdd(contador)
@@ -31,7 +34,8 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <p className="contador">{contador}</p>
                 <p onClick={sum} className="suma">+</p>
             </div>
-            <button onClick={addCart} className="addCart">Agregar al Carrito</button>
+            <button to="/Cart" onClick={addCart} className="addCart">Agregar al Carrito</button>
+            <NavLink to="/Cart" className="linkComprar">Comprar</NavLink>
         </div>
     )
 }

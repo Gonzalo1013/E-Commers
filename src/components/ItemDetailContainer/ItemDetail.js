@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./itemDetail.scss"
 import ItemCount from "./ItemCount/itemCount"
 
+
 const ItemDetail = ({detail}) => {
 
     let [cantidad, setCantidad] = useState(0)
