@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react"
 import ItemList from "./ItemList"
+import PuffLoader from "react-spinners/PuffLoader";
+import "./spinner.scss"
 
 
 const ItemListContainer = () => {
@@ -10,8 +12,8 @@ const ItemListContainer = () => {
     
 
     useEffect(()=>{
-        const pedidoData = fetch("https:/fakestoreapi.com/products")
-        pedidoData 
+        const amountData = fetch("https:/fakestoreapi.com/products")
+        amountData 
         .then((res)=>res.json())
         .then((res)=>{
                     setLoading(false)
@@ -25,12 +27,14 @@ const ItemListContainer = () => {
 
     if(loading){
         return(
-            <div>Cargando...</div>
+            <div className="spinner">
+                <PuffLoader  loading={loading} size={150} color={"rgb(59, 133, 249)"} />
+            </div>
         )
     }
     return (
         <>
-            <ItemList pedido={product}/>
+            <ItemList amount={product}/>
         </>
     )
 }

@@ -5,10 +5,10 @@ import ItemCount from "./ItemCount/itemCount"
 
 const ItemDetail = ({detail}) => {
 
-    let [cantidad, setCantidad] = useState(0)
+    let [amount, setAmount] = useState(0)
 
-    const onAdd = (cantidadItems) => {
-        setCantidad(cantidadItems)
+    const onAdd = (amountItems) => {
+        setAmount(amountItems)
     }
 
     return(
@@ -17,7 +17,7 @@ const ItemDetail = ({detail}) => {
                 <img src={detail.image} alt="" className="image" />
                 <hr />
                 <div className="detail">
-                    <div className="bienvenida">
+                    <div className="welcome">
                         <h1>Bienvenido Corder</h1>
                         <p>Estas a solo un paso de tu compra!!</p>
                     </div>
@@ -26,7 +26,7 @@ const ItemDetail = ({detail}) => {
                         <p>$ {detail.price}</p>
                     </div>
                 <ItemCount stock={5} initial={1} onAdd={onAdd}/>
-                <p>Seleccionaste {cantidad} {detail.title} </p>
+                <p>Seleccionaste {amount} {detail.title} </p>
                 </div>
         </article>
         </div>

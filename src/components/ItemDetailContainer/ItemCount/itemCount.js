@@ -6,23 +6,23 @@ import "./ItemCount.scss"
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
-    const [contador, setContador] = useState(initial)
+    const [count, setCount] = useState(initial)
 
     const sum = ()=>{
-        setContador(contador + 1)
-        if(contador === stock){
-            setContador(contador)
+        setCount(count + 1)
+        if(count === stock){
+            setCount(count)
         }
     }
     const  subtraction = () => {
-        if(contador > 0)
-        setContador(contador -1)
+        if(count > 0)
+        setCount(count -1)
     }
     
     const addCart = () =>{
-        if(contador !== 0){
-            onAdd(contador)
-            setContador(initial)
+        if(count !== 0){
+            onAdd(count)
+            setCount(initial)
             console.log("Se agrego el producto al carrito");
         }
     }
@@ -30,12 +30,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <div className="itemCountContainer">
             <p>Cantidad: {stock}</p>
             <div className="cont">
-                <p onClick={subtraction} className="resta">-</p>
-                <p className="contador">{contador}</p>
-                <p onClick={sum} className="suma">+</p>
+                <p onClick={subtraction} className="subtraction">-</p>
+                <p className="count">{count}</p>
+                <p onClick={sum} className="sum">+</p>
             </div>
             <button to="/Cart" onClick={addCart} className="addCart">Agregar al Carrito</button>
-            <NavLink to="/Cart" className="linkComprar">Comprar</NavLink>
+            <NavLink to="/Cart" className="linkBuy">Comprar</NavLink>
         </div>
     )
 }

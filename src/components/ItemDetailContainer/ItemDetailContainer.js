@@ -9,12 +9,12 @@ const ItemDetailtContainer = () => {
     const {id} = useParams()
 
     useEffect(()=>{
-        const obtenerDatos = async () =>{
-            const pedidoApi = await fetch(`https:/fakestoreapi.com/products/${id}`)
-            const pedido = await pedidoApi.json()
-            setDetail(pedido)
+        const getData = async () =>{
+            const orderApi = await fetch(`https:/fakestoreapi.com/products/${id}`)
+            const order = await orderApi.json()
+            setDetail(order)
         }
-        obtenerDatos()
+        getData()
     },[id])
     
     return ( 
