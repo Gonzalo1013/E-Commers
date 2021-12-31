@@ -24,6 +24,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
             onAdd(count)
             setCount(initial)
             console.log("Se agrego el producto al carrito");
+            let parent = document.getElementsByClassName("itemCountContainer")[0];
+            let child = parent.getElementsByTagName("button")[0];
+            let childCount = parent.getElementsByClassName("cont")[0];
+                parent.removeChild(child);
+                parent.removeChild(childCount)
         }
     }
     return(
@@ -35,7 +40,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <p onClick={sum} className="sum">+</p>
             </div>
             <button to="/Cart" onClick={addCart} className="addCart">Agregar al Carrito</button>
-            <NavLink to="/Cart" className="linkBuy">Comprar</NavLink>
+            <NavLink to="/Cart" className="linkBuy">Terminar Compra</NavLink>
         </div>
     )
 }

@@ -13,15 +13,15 @@ const ItemListContainer = () => {
 
     useEffect(()=>{
         const amountData = fetch("https:/fakestoreapi.com/products")
-        amountData 
-        .then((res)=>res.json())
-        .then((res)=>{
-                    setLoading(false)
-                    setProduct(res)
-                    // console.log(res)
-                })
-        .catch(()=>{
-            console.log("Algo anda mal");
+            amountData 
+            .then((res)=>res.json())
+            .then((res)=>{
+                        setLoading(false)
+                        setProduct(res)
+                        console.log(res)
+                    })
+            .catch(()=>{
+                console.log("Algo anda mal");
         })
     },[])
 

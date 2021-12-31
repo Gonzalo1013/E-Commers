@@ -3,7 +3,8 @@ import Item from "./Item"
 
 
 const ItemList = (props) => {
-        return(
+
+    return(
             <div>
                 <ul className="itemList">
                     {props.amount.map((product,index)=>{

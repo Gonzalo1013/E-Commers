@@ -1,3 +1,8 @@
+.contentFilterElectronics{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 16px;
     .list{
         border: solid black;
         display: flex;
@@ -27,14 +32,17 @@
             .contentTitle{
                 height: 80px;
                 padding: 5px;
+                // border: solid black;
                 h4{
                     text-decoration: underline;
+                    margin-top: 0;
                 }
             }
             b{
                 font-weight: bold;
             }
             .button{
+                display: flex;
                 width: 180px;
                 height: 30px;
                 font-size: 1.3em;
@@ -43,8 +51,10 @@
                 letter-spacing: 1.2px;
                 text-decoration: none;
                 color: rgb(59, 133, 249);
+                flex-wrap: nowrap;
+                justify-content: center;
                 align-items: center;
-                
             }
         }
     }
+}
