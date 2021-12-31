@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import {NavLink} from "react-router-dom"
+// import {NavLink} from "react-router-dom"
 
 import "./ItemCount.scss"
 
@@ -29,6 +29,18 @@ const ItemCount = ({stock, initial, onAdd}) => {
             let childCount = parent.getElementsByClassName("cont")[0];
                 parent.removeChild(child);
                 parent.removeChild(childCount)
+                
+            let buyButton = document.createElement("a")
+            buyButton.textContent = "Terminar Compra"
+            buyButton.setAttribute("class","linkBuy")
+            buyButton.setAttribute("href","/Cart")
+                parent.appendChild(buyButton)
+
+            let keepBuying = document.createElement("a")
+            keepBuying.textContent = "Seguir Comprando"
+            keepBuying.setAttribute("class","buying")
+            keepBuying.setAttribute("href", "/Productos")
+                parent.appendChild(keepBuying)
         }
     }
     return(
@@ -40,7 +52,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <p onClick={sum} className="sum">+</p>
             </div>
             <button to="/Cart" onClick={addCart} className="addCart">Agregar al Carrito</button>
-            <NavLink to="/Cart" className="linkBuy">Terminar Compra</NavLink>
+            
         </div>
     )
 }
