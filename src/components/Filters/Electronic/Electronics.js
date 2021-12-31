@@ -18,19 +18,19 @@ const Electronics = () => {
                 })
             },[]);
 
-            const objetoFiltrado = electronic.filter(respuesta => respuesta.category === "electronics")
+            const objetElectronicFilter = electronic.filter(product => product.category === "electronics")
             // console.log(objetoFiltrado);
     return (
         <div className="contentFilterElectronics">
-            {objetoFiltrado.map((meme, index) => {
+            {objetElectronicFilter.map((filteredProduct, index) => {
                 return <article className="list" key={index}>
-                        <img src={meme.image} alt="" />
+                        <img src={filteredProduct.image} alt="" />
                             <div className="detail">
                                 <div className="contentTitle">
-                                    <h4>{meme.title}</h4>
+                                    <h4>{filteredProduct.title}</h4>
                                 </div>
-                                <b>${meme.price}</b>
-                                <Link className="button" to={`/producto/${meme.id}`}>Ver Detalle</Link>
+                                <b>${filteredProduct.price}</b>
+                                <Link className="button" to={`/producto/${filteredProduct.id}`}>Ver Detalle</Link>
                             </div>
                         </article>
                 })}
