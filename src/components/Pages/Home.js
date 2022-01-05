@@ -1,8 +1,15 @@
+// import React, {useState, useEffect} from "react" 
+
+
 const Home = () => {
+
+
     return (
-        <h1>
-            Hola soy Home
-        </h1>
+        <>
+            <h1>
+                Hola soy Home 
+            </h1>
+        </>
     )
 }
 
