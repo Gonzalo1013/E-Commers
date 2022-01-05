@@ -3,8 +3,9 @@
     display: flex;
     justify-content:space-between;
     box-shadow: black 3px 3px 5px;
+    height: 64px;
+    border: solid black;
     // position: fixed;
-    // width: 99%;
     .prototipe{
         list-style: none;
         text-decoration: none;
@@ -13,30 +14,80 @@
             color: black;
         }
     }
-    .unList{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 0;
-        margin-bottom: 0;
-        .listNavBar{
-            margin: 10px;
+        .unList{
+            display: flex;
+            flex-direction: row;
+            margin-top: 22px;
+            // justify-content: right;
             list-style: none;
-            .linkLink{
-                text-decoration: none;
+            .listNavBar{
+                margin: 0px 16px;
+                list-style: none;
+                .linkLink{
+                    text-decoration: none;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: large;
+                    color: black;
+                    padding: 16px 8px;
+                    border-radius: 3px;
+                }
+                .linkLink:hover{
+                    background-color: grey;
+                }
+            }
+            
+            
+            
+            .subListTitle{
+                list-style: none;
+                text-align: center;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: large;
                 color: black;
-                padding: 16px 8px;
-                border-radius: 3px;
-            }
-            .linkLink:hover{
+                    width: 100px;
+                    border-radius: 3px;
+                    // border: solid black;
+                    margin: -16px 0px;
+                    padding: 14px 0px;
+                    .unSubList{
+                        margin-top: 25px;
+                        background-color: lightgrey;
+                        box-shadow: black 3px 3px 5px;
+                        width: 200px;
+                        position: absolute;
+                        z-index: 254345;
+                        #subList{
+                            list-style: none;
+                            // display: none;
+                            .subLink{
+                                text-decoration: none;
+                                text-align: left;
+                                margin-left: -40px;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: large;
+                                color: black;
+                                padding: 4px 8px;
+                                border-radius: 3px;
+                                // border: solid black;
+                                display: block;
+                            }
+                            .subLink:hover{
+                                background-color: grey;
+                            }
+                        }
+                        #subList:hover{
+                            display: block;
+                        }
+                    }
+                }
+            .subListTitle:hover{
                 background-color: grey;
             }
         }
         .logoCart{
             width: 40px;
             margin-right: 16px;
+            margin-top: -8px;
         }
     }
-}
+

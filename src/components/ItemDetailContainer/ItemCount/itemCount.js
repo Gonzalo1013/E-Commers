@@ -24,6 +24,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             onAdd(count)
             setCount(initial)
             console.log("Se agrego el producto al carrito");
+            
             let parent = document.getElementsByClassName("itemCountContainer")[0];
             let child = parent.getElementsByTagName("button")[0];
             let childCount = parent.getElementsByClassName("cont")[0];
