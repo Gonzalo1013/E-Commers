@@ -4,8 +4,9 @@ import ItemDetailtContainer from './components/ItemDetailContainer/ItemDetailCon
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./components/Pages/Home"
 import Contacto from './components/Pages/Contacto';
-import Cart from "./components/Pages/Cart"
+import Cart from "./components/MyCart/Cart"
 import "./app.scss"
+import CustomProvider from './components/Context/myContext';
 
 function App() {
   const unList = [
@@ -22,19 +23,21 @@ function App() {
   ]
 
   return (
-    <BrowserRouter>
-        <NavBar links={unList} subLinks={subList}/>
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            {/* <Route path="/Inicio" element={<Home/>}/> */}
-            <Route path="Contactos" element={<Contacto/>}/>
-            <Route path="/Productos" element={<ItemListContainer/>}/>
-            <Route path="/Cart" element={<Cart/>}/>
-            <Route path="/Categoria/:name" element={<ItemListContainer/>}/>
-            <Route path="producto/:id" element={<ItemDetailtContainer />}/>
-        </Routes>
-        
-    </BrowserRouter>
+    <CustomProvider>
+      <BrowserRouter>
+          <NavBar links={unList} subLinks={subList}/>
+          <Routes>
+              <Route path="/" element={<Home/>}/>
+              {/* <Route path="/Inicio" element={<Home/>}/> */}
+              <Route path="Contactos" element={<Contacto/>}/>
+              <Route path="/Productos" element={<ItemListContainer/>}/>
+              <Route path="/Cart" element={<Cart/>}/>
+              <Route path="/Categoria/:name" element={<ItemListContainer/>}/>
+              <Route path="producto/:id" element={<ItemDetailtContainer />}/>
+          </Routes>
+          
+      </BrowserRouter>
+    </CustomProvider>
   );
 }
 

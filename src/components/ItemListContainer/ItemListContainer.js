@@ -18,10 +18,10 @@ const ItemListContainer = () => {
         let amountData
         
         if(name){
-            console.log(`categoria ${name}`);
+            // console.log(`categoria ${name}`);
             amountData = fetch(`https:/fakestoreapi.com/products/category/${name}`)
         }else {
-            console.log(`todas las categorias`);
+            // console.log(`todas las categorias`);
             amountData = fetch(`https:/fakestoreapi.com/products`)
         }
         amountData 
@@ -29,7 +29,7 @@ const ItemListContainer = () => {
         .then((res)=>{
             setLoading(false)
             setProduct(res)
-            console.log(res)
+            // console.log(res)
         })
         .catch(()=>{
             console.log("Algo anda mal");

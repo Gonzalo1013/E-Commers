@@ -1,14 +1,19 @@
 import React, { useState } from "react"
 import "./itemDetail.scss"
 import ItemCount from "./ItemCount/itemCount"
+import { useMyContext } from "../Context/myContext"
 
 
 const ItemDetail = ({detail}) => {
+
+    const {addToCart, delateToCart} = useMyContext()
 
     let [amount, setAmount] = useState(0)
 
     const onAdd = (amountItems) => {
         setAmount(amountItems)
+        addToCart(detail, amountItems)
+        delateToCart(detail, amountItems)
     }
 
     return(
