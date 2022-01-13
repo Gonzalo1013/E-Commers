@@ -39,8 +39,12 @@ const Cart = () => {
                             <p>Cantidad Total de productos: {totalQuantity}</p>
                             <button className="button_reset" onClick={resetCart}>Limpiar el Carrito</button>
                     </div>
+                    <div className="link_button_finish">
+                            <Link className="Link_terminar" to="/Buying" onClick={resetCart}>Terminar Compra</Link>
+                    </div>
+                </div> : 
                         <Link className="link_button_Comprar" to="/productos">Comprar</Link>
-                </div> : <p></p>}
+                }
         </div>
         
     )

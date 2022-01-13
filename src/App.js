@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./components/Pages/Home"
 import Contacto from './components/Pages/Contacto';
 import Cart from "./components/MyCart/Cart"
+import Buying from './components/Pages/Buying';
 import "./app.scss"
 import CustomProvider from './components/Context/myContext';
 
@@ -34,6 +35,7 @@ function App() {
               <Route path="/Cart" element={<Cart/>}/>
               <Route path="/Categoria/:name" element={<ItemListContainer/>}/>
               <Route path="producto/:id" element={<ItemDetailtContainer />}/>
+              <Route path="/Buying" element={<Buying/>}></Route>
           </Routes>
           
       </BrowserRouter>
