@@ -22,9 +22,9 @@ const Cart = () => {
                                 </div>
                                 <div>
                                     <b>${product.price}</b>
-                                    <button >-</button>
+                                    
                                     <p>X{product.quantity}</p>
-                                    <button >+</button>
+                                    
                                     <button className="button_delateToCart" onClick={()=>cleanToCart(product.id,product.quantity)}><img src="/logo_Eliminar.png" alt="delete_log" /></button>
                                 </div>
                             </li>
