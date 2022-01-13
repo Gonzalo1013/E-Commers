@@ -6,14 +6,14 @@ import { useMyContext } from "../Context/myContext"
 
 const ItemDetail = ({detail}) => {
 
-    const {addToCart, delateToCart} = useMyContext()
+    const {addToCart} = useMyContext()
 
     let [amount, setAmount] = useState(0)
 
     const onAdd = (amountItems) => {
         setAmount(amountItems)
         addToCart(detail, amountItems)
-        delateToCart(detail, amountItems)
+        // delateToCart(detail, amountItems)
     }
 
     return(

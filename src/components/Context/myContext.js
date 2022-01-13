@@ -14,54 +14,52 @@ const CustomProvider = ({children}) => {
 
     const [totalQuantity, setTotalQuantity] = useState(0)
     const [myCart, setMyCart] = useState([])
-    const [oneQuantity, setOneQuantity] = useState(0)
     // const [totalPrice, setTotalPrice] = useState(0)
 
 
-    const addToCart = (detail, amountItems) => {
-
-            // console.log("soy el Provider");
-                    console.log(detail, amountItems)
-
-        const copia_producto = {...detail}
-        copia_producto.quantity = amountItems
-
-        setMyCart([...myCart,copia_producto])
-        setTotalQuantity(totalQuantity + amountItems)
-        setOneQuantity(amountItems)
+    const addToCart = (product, quantity) => {
+        const id = product.id
+        if(isInCart(id)) {
+            const copy_cart = [...myCart]
+            let match = copy_cart.find((p) => p.id === product.id)
+            match.quantity = match.quantity + quantity
+            setMyCart(copy_cart)
+        } else {
+            const product_and_quantity = {
+                ...product,
+                quantity
+            }
+            setMyCart([...myCart, product_and_quantity])
+        }
+        setTotalQuantity(totalQuantity + quantity)
     }
 
 
-
-
-    const delateToCart = () => {
-        // console.log(detail, amountItems);
-        if(oneQuantity >= 1){
-            setOneQuantity(oneQuantity - 1)
-            setTotalQuantity(totalQuantity -1)
-        } 
+    const cleanToCart = (id, quantity) => {
+        
+        let cartFilter = myCart.filter(product => (product.id) !== id)
+        setMyCart(cartFilter)
+        setTotalQuantity(totalQuantity - quantity)
     }
 
 
-
-
-
-
-    const resetCart = () => 
-    {
+    const resetCart = () => {
         setMyCart([])
         setTotalQuantity(0)
     }
 
-    // const isInCart = (id) => {}
 
+    const isInCart = (id) => {
+        return myCart.find((product)=>product.id === id)
+    }
+
+    
     const contextValue = {
         totalQuantity, 
         myCart,
-        oneQuantity,
         resetCart,
         addToCart,
-        delateToCart
+        cleanToCart,
     }
 
 

@@ -3,17 +3,9 @@ import { Link } from "react-router-dom"
 import "./cart_style.scss"
 const Cart = () => {
 
-    const {myCart, totalQuantity, resetCart, delateToCart, oneQuantity} = useMyContext()
-
+    const {myCart, totalQuantity, resetCart, cleanToCart} = useMyContext()
     // const resultado = useMyContext()
     // console.log(resultado);
-
-//     const gonza = [
-//         {id:1, nombre:"gonzalo", edad: 31},
-//         {id:1, nombre:"gonzalo", edad: 31},
-//         {id:1, nombre:"gonzalo", edad: 31},
-//         {id:1, nombre:"gonzalo", edad: 31},
-// ]
 
     return(
         <div className="contentCart">
@@ -30,9 +22,10 @@ const Cart = () => {
                                 </div>
                                 <div>
                                     <b>${product.price}</b>
-                                    <p>X{oneQuantity}</p>
-                                    {console.log(oneQuantity)}
-                                    <button className="button_delateToCart" onClick={delateToCart}><img src="/logo_Eliminar.png" alt="delete_log" /></button>
+                                    <button >-</button>
+                                    <p>X{product.quantity}</p>
+                                    <button >+</button>
+                                    <button className="button_delateToCart" onClick={()=>cleanToCart(product.id,product.quantity)}><img src="/logo_Eliminar.png" alt="delete_log" /></button>
                                 </div>
                             </li>
                         </>
