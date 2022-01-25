@@ -3,6 +3,10 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList"
 import PuffLoader from "react-spinners/PuffLoader";
 import "./spinner.scss"
+import { db } from "../Firebase/Firebase"
+import { getDocs , query , collection, where } from "firebase/firestore";
+// console.log(db);
+
 
 
 const ItemListContainer = () => {
@@ -14,28 +18,56 @@ const ItemListContainer = () => {
     
     
     useEffect(()=>{
-        
-        let amountData
-        
+
+        const collection_of_products = collection(db , "products")
+
         if(name){
-            // console.log(`categoria ${name}`);
-            amountData = fetch(`https:/fakestoreapi.com/products/category/${name}`)
-        }else {
-            // console.log(`todas las categorias`);
-            amountData = fetch(`https:/fakestoreapi.com/products`)
+            const consulta = query(collection_of_products, where("category", "==", name))
+        getDocs(consulta)
+        .then(({docs})=>{
+                setProduct(docs.map((doc)=>({ id : doc.id , ...doc.data()})))
+                setLoading(false)
+            })
+        }else{
+            getDocs(collection_of_products)
+            .then((res)=>{
+                const docs = res.docs
+                const list = docs.map((doc)=>{
+                    const id = doc.id
+                    const data = doc.data()
+                    const produc = {
+                        id: id,
+                        ...data                         
+                    }
+                    return produc
+                })
+                setLoading(false)
+                setProduct(list);
+                
+            })
         }
-        amountData 
-        .then((res)=>res.json())
-        .then((res)=>{
-            setLoading(false)
-            setProduct(res)
-            // console.log(res)
-        })
-        .catch(()=>{
-            console.log("Algo anda mal");
-        })
-        
     },[name])
+        
+        // let amountData
+        
+        // if(name){
+        //     // console.log(`categoria ${name}`);
+        //     amountData = fetch(`https:/fakestoreapi.com/products/category/${name}`)
+        // }else {
+        //     // console.log(`todas las categorias`);
+        //     amountData = fetch(`https:/fakestoreapi.com/products`)
+        // }
+        // amountData 
+        // .then((res)=>res.json())
+        // .then((res)=>{
+        //     setLoading(false)
+        //     setProduct(res)
+        //     // console.log(res)
+        // })
+        // .catch(()=>{
+        //     console.log("Algo anda mal");
+        // })
+    // },[name])
 
     if(loading){
         return(

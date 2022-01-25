@@ -5,7 +5,7 @@ import { useMyContext } from "../Context/myContext"
 
 
 const ItemDetail = ({detail}) => {
-
+    
     const {addToCart} = useMyContext()
 
     let [amount, setAmount] = useState(0)
@@ -27,10 +27,11 @@ const ItemDetail = ({detail}) => {
                         <p>Estas a solo un paso de tu compra!!</p>
                     </div>
                     <div className="title">
-                        <h4>{detail.title}</h4>
+                        <h4>{detail.name}</h4>
+                        <h3>{detail.description}</h3>
                         <p>$ {detail.price}</p>
                     </div>
-                <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+                <ItemCount stock={detail.quantity} initial={1} onAdd={onAdd}/>
                 <p>Seleccionaste {amount} {detail.title} </p>
                 </div>
         </article>

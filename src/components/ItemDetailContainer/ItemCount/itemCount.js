@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
-// import {NavLink} from "react-router-dom"
 import "./ItemCount.scss"
 
 
@@ -10,8 +9,9 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial)
 
     const sum = ()=>{
-        setCount(count + 1)
-        if(count === stock){
+        if(count < stock){
+            setCount(count + 1)
+        }else {
             setCount(count)
         }
     }
@@ -21,9 +21,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
     
     const addCart = () =>{
-
-
-        if(count !== 0){
+        if(count > 0){
             onAdd(count)
             setCount(initial)
             console.log("Se agrego el producto al carrito");
@@ -33,7 +31,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 parent.removeChild(child);
                 parent.removeChild(childCount)
                 
-            let buyButton = document.createElement('a')
+            let buyButton = document.createElement(`a`)
             buyButton.textContent = "Ir al Carrito"
             buyButton.setAttribute("class","linkBuy")
             buyButton.setAttribute("href","/Cart")

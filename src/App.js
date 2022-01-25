@@ -17,10 +17,15 @@ function App() {
   ]
   const subList = [
     {id:2, name: "Todos los Productos", href: "/Productos"},
-    {id:4, name: "electronics", href: "/Categoria/electronics"},
-    {id:5, name: "jewelery", href: "/Categoria/jewelery"},
-    {id:7, name: "men's clothing", href: "/Categoria/men's clothing"},
-    {id:9, name: "women's clothing", href: "/Categoria/women's clothing"}
+    {id:4, name: "man", href: "/Categoria/man"},
+    {id:5, name: "woman", href: "/Categoria/woman"},
+    {id:7, name: "unisex", href: "/Categoria/unisex"},
+    
+    // {id:2, name: "Todos los Productos", href: "/Productos"},
+    // {id:4, name: "electronics", href: "/Categoria/electronics"},
+    // {id:5, name: "jewelery", href: "/Categoria/jewelery"},
+    // {id:7, name: "men's clothing", href: "/Categoria/men's clothing"},
+    // {id:9, name: "women's clothing", href: "/Categoria/women's clothing"}
   ]
 
   return (

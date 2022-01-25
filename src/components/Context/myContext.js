@@ -11,14 +11,13 @@ export const useMyContext = () =>{
 
 
 const CustomProvider = ({children}) => {
-
     const [totalQuantity, setTotalQuantity] = useState(0)
     const [myCart, setMyCart] = useState([])
     // const [totalPrice, setTotalPrice] = useState(0)
 
-
     const addToCart = (product, quantity) => {
         const id = product.id
+        console.log(product);
         if(isInCart(id)) {
             const copy_cart = [...myCart]
             let match = copy_cart.find((p) => p.id === product.id)

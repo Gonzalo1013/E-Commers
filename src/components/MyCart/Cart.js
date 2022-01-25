@@ -5,8 +5,7 @@ const Cart = () => {
 
     const {myCart, totalQuantity, resetCart, cleanToCart} = useMyContext()
     // const resultado = useMyContext()
-    // console.log(resultado);
-
+    // console.log(resultado)
     return(
         <div className="contentCart">
             
@@ -18,7 +17,7 @@ const Cart = () => {
                             <li className="liCart" key={id}>
                                 <div>
                                     <img src={product.image} alt="" />
-                                    <h5>{product.title}</h5>
+                                    <h5>{product.name}</h5>
                                 </div>
                                 <div>
                                     <b>${product.price}</b>
