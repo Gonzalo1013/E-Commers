@@ -4,17 +4,15 @@ import "./cart_style.scss"
 const Cart = () => {
 
     const {myCart, totalQuantity, resetCart, cleanToCart} = useMyContext()
-    // const resultado = useMyContext()
-    // console.log(resultado)
+    
     return(
         <div className="contentCart">
             
             {myCart.length > 0 ? (
                 <ul className="ulCart">
                     {myCart.map((product, id)=>{
-                        // console.log(product);
                         return <>
-                            <li className="liCart" key={id}>
+                            <li key={id} className="liCart" >
                                 <div>
                                     <img src={product.image} alt="" />
                                     <h5>{product.name}</h5>

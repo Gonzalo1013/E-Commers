@@ -13,7 +13,6 @@ const ItemDetail = ({detail}) => {
     const onAdd = (amountItems) => {
         setAmount(amountItems)
         addToCart(detail, amountItems)
-        // delateToCart(detail, amountItems)
     }
 
     return(

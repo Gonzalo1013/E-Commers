@@ -7,7 +7,7 @@ const NavBar = ({links, subLinks}) => {
 
     
     return (
-        <div className="contentNavBar">
+        <header className="contentNavBar">
             <NavLink to="/" className="prototipe">
                 <h2>Gonzalo Arroyo te da la bienvenida</h2>
             </NavLink>
@@ -33,10 +33,7 @@ const NavBar = ({links, subLinks}) => {
                     <CartLogo/>
                 </NavLink></li>
             </ul>
-        </div>
-                
-            
-        
+        </header>
     )
 
 }

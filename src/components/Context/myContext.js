@@ -7,8 +7,6 @@ export const { Provider } = context
 export const useMyContext = () =>{
     return useContext(context)
 }
-// console.log(context);
-
 
 const CustomProvider = ({children}) => {
     const [totalQuantity, setTotalQuantity] = useState(0)
@@ -52,7 +50,7 @@ const CustomProvider = ({children}) => {
         return myCart.find((product)=>product.id === id)
     }
 
-    
+
     const contextValue = {
         totalQuantity, 
         myCart,

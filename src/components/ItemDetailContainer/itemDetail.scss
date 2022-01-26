@@ -5,7 +5,6 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
-        // border: solid black;
         width: 1000px;
         background-color: rgb(255, 255, 230);
         padding: 50px 16px;
@@ -24,7 +23,6 @@
         }
         .detail{
             width: 400px;
-            // border: solid black 1px;
             padding: 32px;
             margin-top: 8px;
             .welcome{

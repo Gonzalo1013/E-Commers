@@ -5,7 +5,6 @@ import "./ItemCount.scss"
 
 const ItemCount = ({stock, initial, onAdd}) => {
     
-
     const [count, setCount] = useState(initial)
 
     const sum = ()=>{

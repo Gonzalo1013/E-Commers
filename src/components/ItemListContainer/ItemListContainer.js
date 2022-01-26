@@ -5,8 +5,6 @@ import PuffLoader from "react-spinners/PuffLoader";
 import "./spinner.scss"
 import { db } from "../Firebase/Firebase"
 import { getDocs , query , collection, where } from "firebase/firestore";
-// console.log(db);
-
 
 
 const ItemListContainer = () => {
@@ -15,7 +13,6 @@ const ItemListContainer = () => {
     const [product, setProduct] =useState([])
 
     const {name} = useParams()
-    
     
     useEffect(()=>{
 
@@ -43,31 +40,9 @@ const ItemListContainer = () => {
                 })
                 setLoading(false)
                 setProduct(list);
-                
             })
         }
     },[name])
-        
-        // let amountData
-        
-        // if(name){
-        //     // console.log(`categoria ${name}`);
-        //     amountData = fetch(`https:/fakestoreapi.com/products/category/${name}`)
-        // }else {
-        //     // console.log(`todas las categorias`);
-        //     amountData = fetch(`https:/fakestoreapi.com/products`)
-        // }
-        // amountData 
-        // .then((res)=>res.json())
-        // .then((res)=>{
-        //     setLoading(false)
-        //     setProduct(res)
-        //     // console.log(res)
-        // })
-        // .catch(()=>{
-        //     console.log("Algo anda mal");
-        // })
-    // },[name])
 
     if(loading){
         return(
