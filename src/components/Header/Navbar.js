@@ -29,9 +29,11 @@ const NavBar = ({links, subLinks}) => {
                     <NavLink className="linkLink" to={list.href}>{list.name}</NavLink>
                 </li>
             )}
-                <li><NavLink to="/Cart"> 
-                    <CartLogo/>
-                </NavLink></li>
+                <li>
+                    <NavLink to="/Cart"> 
+                        <CartLogo/>
+                    </NavLink>
+                </li>
             </ul>
         </header>
     )

@@ -7,7 +7,9 @@ const CartLogo = () =>{
     return(
         <>
             <img className="logoCart" src="/logoCarrito.png" alt="cartLogo" />
-            {totalQuantity}
+            <b className="count">
+                {totalQuantity}
+            </b>
         </>
     )
 }

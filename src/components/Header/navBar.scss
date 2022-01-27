@@ -12,83 +12,89 @@
             color: black;
         }
     }
-        .unList{
-            display: flex;
-            flex-direction: row;
-            margin-top: 22px;
-            font-weight: bold;
+    .unList{
+        display: flex;
+        flex-direction: row;
+        margin-top: 22px;
+        font-weight: bold;
+        list-style: none;
+        .listNavBar{
+            margin: 0px 10px;
             list-style: none;
-            .listNavBar{
-                margin: 0px 10px;
-                list-style: none;
-                text-transform: uppercase;
-                .linkLink{
-                    text-decoration: none;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: large;
-                    color: black;
-                    padding: 16px 8px;
-                    border-radius: 3px;
-                }
-                .linkLink:hover{
-                    background-color: grey;
-                }
-            }
-            
-            .subListTitle{
-                list-style: none;
-                text-align: center;
+            text-transform: uppercase;
+            .linkLink{
+                text-decoration: none;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: large;
                 color: black;
-                    width: 100px;
-                    border-radius: 3px;
-                    font-weight: bold;
-                    margin: -14px 20px;
-                    padding: 14px 25px 8px 10px;
-                    text-transform: uppercase;
-                    z-index: 6354;
-                    .unSubList{
-                        margin-top: 16px;
-                        background-color: lightgrey;
-                        box-shadow: black 3px 3px 5px;
-                        width: 200px;
-                        display: none;
-                        .subList{
-                            list-style: none;
-                            .subLink{
-                                text-decoration: none;
-                                text-align: left;
-                                margin-left: -40px;
-                                font-family: Arial, Helvetica, sans-serif;
-                                font-size: large;
-                                color: black;
-                                padding: 10px 8px;
-                                border-radius: 3px;
-                                border: solid black 0.5px;
-                                font-weight: bold;
-                                display: block;
-                            }
-                            .subLink:hover{
-                                background-color: grey;
-                            }
-                        }
-                        
-                    }
-                }
-            .subListTitle:hover{
+                padding: 16px 8px;
+                border-radius: 3px;
+            }
+            .linkLink:hover{
                 background-color: grey;
             }
-            .subListTitle:hover > .unSubList{
-                display: block;
+        }
+        
+        .subListTitle{
+            list-style: none;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: black;
+                width: 100px;
+                border-radius: 3px;
+                font-weight: bold;
+                margin: -14px 20px;
+                padding: 14px 25px 8px 10px;
+                text-transform: uppercase;
+                z-index: 6354;
+                .unSubList{
+                    margin-top: 16px;
+                    background-color: lightgrey;
+                    box-shadow: black 3px 3px 5px;
+                    width: 200px;
+                    display: none;
+                    .subList{
+                        list-style: none;
+                        .subLink{
+                            text-decoration: none;
+                            text-align: left;
+                            margin-left: -40px;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: large;
+                            color: black;
+                            padding: 10px 8px;
+                            border-radius: 3px;
+                            border: solid black 0.5px;
+                            font-weight: bold;
+                            display: block;
+                        }
+                        .subLink:hover{
+                            background-color: grey;
+                        }
+                    }
+                    
+                }
             }
+        .subListTitle:hover{
+            background-color: grey;
         }
-        .logoCart{
-            width: 40px;
-            margin-right: 16px;
-            margin-top: -8px;
+        .subListTitle:hover > .unSubList{
+            display: block;
         }
-        .logoCart:hover{
-            transform: scale(1.2);
-        }
+    }
+    .logoCart{
+        width: 40px;
+        margin-top: -8px;
+    }
+    .logoCart:hover{
+        transform: scale(1.2);
+    }
+    .count{
+        margin-right: 16px;
+        text-decoration: none;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1em;
+    }
 }

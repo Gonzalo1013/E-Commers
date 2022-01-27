@@ -13,7 +13,6 @@ function App() {
   const unList = [
     {id:1, name: "Inicio", href: "/" },
     {id:3, name: "Contacto", href: "/Contactos"},
-    // {id:6, href: "/Cart"},
   ]
   const subList = [
     {id:2, name: "Todos los Productos", href: "/Productos"},

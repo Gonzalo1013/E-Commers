@@ -15,10 +15,28 @@ const ItemDetail = ({detail}) => {
         addToCart(detail, amountItems)
     }
 
+    
+    const openFulImg = () => {
+        const fulImgBox = document.getElementById("fulImgBox")
+        fulImgBox.style.display = "flex"
+    }
+    const closeImg = () => {
+        const fulImgBox = document.getElementById("fulImgBox")
+        fulImgBox.style.display = "none"
+    }
     return(
-        <div className="containerContainer">
+        <div className="containerContainer" >
         <article className="detailContainer" key={detail.id}>
-                <img src={detail.image} alt="" className="image" />
+
+                <div onClick={openFulImg} className="contentImgs">
+                    <img onClick={openFulImg} src={detail.image} alt="" className="img" />
+                </div>
+
+                <div className="content_img" id="fulImgBox">
+                    <img src={detail.image} alt="" className="image" id="fulImg" />
+                    <span onClick={closeImg}>X</span>                    
+                </div>
+
                 <hr />
                 <div className="detail">
                     <div className="welcome">
