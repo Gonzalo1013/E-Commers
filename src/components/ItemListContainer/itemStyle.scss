@@ -1,5 +1,5 @@
     .list{
-        border: solid black;
+        // border: solid black;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -9,6 +9,7 @@
         width: 220px;
         height: 400px;
         margin: 10px 5px;
+        box-shadow: black 1px 1px 3px;
         img{
             
             width: 100%;

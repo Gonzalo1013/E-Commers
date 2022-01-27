@@ -11,7 +11,7 @@ export const useMyContext = () =>{
 const CustomProvider = ({children}) => {
     const [totalQuantity, setTotalQuantity] = useState(0)
     const [myCart, setMyCart] = useState([])
-    // const [totalPrice, setTotalPrice] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
 
 
     const addToCart = (product, quantity) => {
@@ -29,8 +29,20 @@ const CustomProvider = ({children}) => {
             setMyCart([...myCart, product_and_quantity])
         }
         setTotalQuantity(totalQuantity + quantity)
-    }
 
+    }
+    
+    
+    const totalShop = () => {
+        let suma = 0
+        const copy_cart = [...myCart] 
+        copy_cart.map((res)=>{
+                suma += res.price * res.quantity
+            return setTotalPrice(suma);
+        })
+    }
+    
+    
 
     const cleanToCart = (id, quantity) => {
         
@@ -57,7 +69,8 @@ const CustomProvider = ({children}) => {
         resetCart,
         addToCart,
         cleanToCart,
-        // totalPrice
+        totalPrice,
+        totalShop
     }
 
 

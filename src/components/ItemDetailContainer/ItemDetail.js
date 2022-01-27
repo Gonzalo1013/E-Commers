@@ -15,7 +15,6 @@ const ItemDetail = ({detail}) => {
         addToCart(detail, amountItems)
     }
 
-    
     const openFulImg = () => {
         const fulImgBox = document.getElementById("fulImgBox")
         fulImgBox.style.display = "flex"
@@ -24,6 +23,7 @@ const ItemDetail = ({detail}) => {
         const fulImgBox = document.getElementById("fulImgBox")
         fulImgBox.style.display = "none"
     }
+
     return(
         <div className="containerContainer" >
         <article className="detailContainer" key={detail.id}>

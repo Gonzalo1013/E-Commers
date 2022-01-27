@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import "./ItemCount.scss"
 
-
 const ItemCount = ({stock, initial, onAdd}) => {
     
     const [count, setCount] = useState(initial)
@@ -41,7 +40,8 @@ const ItemCount = ({stock, initial, onAdd}) => {
             keepBuying.setAttribute("class","buying")
             keepBuying.setAttribute("href", "/productos")
                 parent.appendChild(keepBuying)   
-        }
+            }
+            
     }
     return(
         <div className="itemCountContainer">
