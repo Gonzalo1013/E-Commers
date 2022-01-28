@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import "./ItemCount.scss"
-
 const ItemCount = ({stock, initial, onAdd}) => {
     
     const [count, setCount] = useState(initial)
@@ -29,17 +28,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 parent.removeChild(child);
                 parent.removeChild(childCount)
 
-            let buyButton = document.createElement("a")
-            buyButton.textContent = "Ir al Carrito"
-            buyButton.setAttribute("class","linkBuy")
-            buyButton.setAttribute("href","/Cart")
-            parent.appendChild(buyButton)
-            
-            let keepBuying = document.createElement("a")
-            keepBuying.textContent = "Seguir Comprando"
-            keepBuying.setAttribute("class","buying")
-            keepBuying.setAttribute("href", "/productos")
-                parent.appendChild(keepBuying)   
+            let call_buttons = document.getElementById("call_button") 
+            let call_button = document.getElementById("call_button_buy") 
+                call_buttons.style.display = "flex"
+                call_button.style.display = "flex"
             }
             
     }
@@ -52,7 +44,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <p onClick={sum} className="sum">+</p>
             </div>
             <button onClick={addCart} className="addCart">Agregar al Carrito</button>
-            <Link to="/Cart" className="gonza">Con este Link anda el carrito</Link>
+            <button className="button_link" id="call_button">
+                <Link to="/Cart" className="link_addCart">Ir al Carrito</Link>
+            </button>
+            <button className="button_link" id="call_button_buy">
+                <Link to="/" className="link_addCart">Seguir Comprando</Link>
+            </button>
         </div>
     )
 }

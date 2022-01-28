@@ -9,7 +9,8 @@ const NavBar = ({links, subLinks}) => {
     return (
         <header className="contentNavBar">
             <NavLink to="/" className="prototipe">
-                <h2>Gonzalo Arroyo te da la bienvenida</h2>
+                <img src="/bicycle.png" alt=""/>
+                <h2>PePe´s Bikes</h2>
             </NavLink>
         
             <ul className="unList">

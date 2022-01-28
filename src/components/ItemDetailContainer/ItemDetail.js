@@ -40,7 +40,7 @@ const ItemDetail = ({detail}) => {
                 <hr />
                 <div className="detail">
                     <div className="welcome">
-                        <h1>Bienvenido Corder</h1>
+                        <h1>Bienvenido Coder</h1>
                         <p>Estas a solo un paso de tu compra!!</p>
                     </div>
                     <div className="title">

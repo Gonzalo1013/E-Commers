@@ -3,14 +3,13 @@ import { Link } from "react-router-dom"
 import "./cart_style.scss"
 
 const Cart = () => {
-
-    const {myCart, totalQuantity, resetCart, cleanToCart, totalPrice, totalShop} = useMyContext()
-
+    const {myCart, totalQuantity, resetCart, cleanToCart, totalPrice} = useMyContext()
     return(
         <div className="contentCart">
             
             {myCart.length > 0 ? (
                 <ul className="ulCart">
+                    
                     {myCart.map((product, index)=>{
                         let finalPrice = product.price * product.quantity
 
@@ -38,12 +37,12 @@ const Cart = () => {
                             {}
                         </h3>
                     </div>
-                    <div className="content_button_totalQuantity">
                             <p>Cantidad Total de productos: {totalQuantity}</p>
-                            <button className="button_reset" onClick={resetCart}>Limpiar el Carrito</button>
+                    <div className="content_button_totalQuantity">
+                        <p className="totalPrice" >El precio Total es: ${totalPrice},00</p>
+                        <button className="button_reset" onClick={resetCart}>Limpiar el Carrito</button>
                     </div>
 
-                    <p className="totalPrice" onClick={totalShop()}>El precio Total es: ${totalPrice},00</p>
 
                     <div className="link_button_finish">
                             <button className="buttonFinish">
@@ -53,12 +52,13 @@ const Cart = () => {
                 </div> 
 
                 :   <button className="button_Comprar">
-                        <Link className="link_button_Comprar" to="/productos">Comprar</Link>
+                        <Link className="link_button_Comprar" to="/">Comprar</Link>
                     </button>
                 }
         </div>
         
     )
 }
+
 
 export default Cart

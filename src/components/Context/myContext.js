@@ -16,39 +16,46 @@ const CustomProvider = ({children}) => {
 
     const addToCart = (product, quantity) => {
         const id = product.id
+        let sum = 0
+        
+
         if(isInCart(id)) {
             const copy_cart = [...myCart]
             let match = copy_cart.find((p) => p.id === product.id)
             match.quantity = match.quantity + quantity
             setMyCart(copy_cart)
+            copy_cart.forEach((res)=>{
+                sum += res.price * res.quantity
+                setTotalPrice(sum)
+            })
         } else {
             const product_and_quantity = {
                 ...product,
                 quantity
             }
+            sum = product_and_quantity.price * product_and_quantity.quantity
+            setTotalPrice(sum)
+            const copy = [...myCart]
+            copy.forEach((res)=>{
+                sum += res.price * res.quantity
+                setTotalPrice(sum)
+            })
             setMyCart([...myCart, product_and_quantity])
         }
         setTotalQuantity(totalQuantity + quantity)
+    }
 
-    }
-    
-    
-    const totalShop = () => {
-        let suma = 0
-        const copy_cart = [...myCart] 
-        copy_cart.map((res)=>{
-                suma += res.price * res.quantity
-            return setTotalPrice(suma);
-        })
-    }
-    
-    
 
     const cleanToCart = (id, quantity) => {
         
         let cartFilter = myCart.filter(product => (product.id) !== id)
         setMyCart(cartFilter)
         setTotalQuantity(totalQuantity - quantity)
+        let crashFilter = myCart.filter(product => (product.id) === id)
+            crashFilter.forEach((res)=> {
+                let subtraction = res.price * res.quantity
+                setTotalPrice(totalPrice - subtraction)
+            })
     }
 
 
@@ -69,8 +76,7 @@ const CustomProvider = ({children}) => {
         resetCart,
         addToCart,
         cleanToCart,
-        totalPrice,
-        totalShop
+        totalPrice
     }
 
 
