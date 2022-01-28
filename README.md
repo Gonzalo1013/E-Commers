@@ -1,5 +1,5 @@
 # Proyecto Final Coder House
-    ![](https://media.giphy.com/media/d4JCPoUtBpuUYATMrf/giphy.gif)
+    ![Alt Text](https://media.giphy.com/media/d4JCPoUtBpuUYATMrf/giphy.gif)
 * Descripcion del Proyecto
     El proyecto se trata de un e-commers de bicicletas donde el cliente puede ver el producto y hacer toda la simulación de compra.
 
