@@ -5,8 +5,8 @@
     *El proyecto se trata de un e-commers de bicicletas donde el cliente puede ver el producto y hacer toda la simulación de compra.*
 
 * **Tecnologías usadas**
-![HTML5](/public/icons/html-5.png) ![Css](/public/icons/css.png) ![JavaScript](/public/icons/js.png) ![Sass](/public/icons/sass.png) ![React](/public/icons/react.png)![Nodejs](/public/icons/nodejs.png)
-     Tambien se uso ***firebase, react-router-dom,react-spinners***
+    - ![HTML5](/public/icons/html-5.png) ![Css](/public/icons/css.png) ![JavaScript](/public/icons/js.png) ![Sass](/public/icons/sass.png) ![React](/public/icons/react.png)![Nodejs](/public/icons/nodejs.png)
+    - Tambien se uso ***firebase, react-router-dom,react-spinners***
 ---
 * **Descripcion de los Componentes**
      *Dentro de la carpeta components se encuentran todos los componentes de la pagina, cada uno en una carpeta diferente.*
@@ -36,7 +36,7 @@
     ``` npm start ```
 5. Ya puede visualizar e interactuar con la pagina
 ---
-**Alumno: Gonzalo Arroyo**
-**Camada: 19770**
-**Fecha: 29/01/2022**
+- **Alumno: Gonzalo Arroyo**
+- **Camada: 19770**
+- **Fecha: 29/01/2022**
 [![](/public/icons/instagram.png)](https://www.instagram.com/) [![](/public/icons/linkedin.png)](https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin)
