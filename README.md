@@ -39,4 +39,4 @@
 - **Alumno: Gonzalo Arroyo**
 - **Camada: 19770**
 - **Fecha: 29/01/2022**
-[![](/public/icons/instagram.png)](https://www.instagram.com/) [![](/public/icons/linkedin.png)](https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin)
+- **Mis Redes:** [![](/public/icons/instagram.png)](https://www.instagram.com/) [![](/public/icons/linkedin.png)](https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin)
