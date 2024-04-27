@@ -36,7 +36,7 @@
     ``` npm start ```
 5. Ya puede visualizar e interactuar con la pagina
 ---
-Tambien podes ver el proyecto en Netlify conel siguiente enlace  [proyecto bicycle](https://practical-nobel-3171a9.netlify.app/)
+Tambien podes ver el proyecto en Netlify conel siguiente enlace  [proyecto bicycle](https://bikescommerce.netlify.app/)
 
 ---
 - **Alumno: Gonzalo Arroyo**
